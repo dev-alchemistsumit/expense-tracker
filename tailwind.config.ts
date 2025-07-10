@@ -6,3 +6,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+// This is a Tailwind CSS configuration file for a Remix application.
