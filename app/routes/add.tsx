@@ -3,6 +3,7 @@ import { Form, redirect } from "@remix-run/react";
 import type { ActionFunction } from "@remix-run/node";
 import { addExpense } from "~/lib/db.server";
 
+
 export const action: ActionFunction = async ({ request }) => {
   const form = await request.formData();
   const newExpense = {
