@@ -33,7 +33,7 @@ export default function Index() {
   const { expenses } = useLoaderData<{ expenses: Expense[] }>();
   const [searchParams] = useSearchParams();
 
-  const successMessage = new URLSearchParams(location.search).get("success");
+  const successMessage = searchParams.get("success");
   const total = expenses.reduce((sum: number, e: Expense) => sum + e.amount, 0);
 
   const isFiltered =

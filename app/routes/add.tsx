@@ -11,16 +11,22 @@ type ActionData = {
   errors?: z.inferFlattenedErrors<typeof expenseSchema>["fieldErrors"];
   values?: Record<string, string>;
 };
-
 export const action: ActionFunction = async ({ request }) => {
-  const form = Object.fromEntries(await request.formData());
+  const rawForm = await request.formData();
+
+  // Convert to Record<string, string> safely
+  const form: Record<string, string> = {};
+  for (const [key, value] of rawForm.entries()) {
+    form[key] = typeof value === "string" ? value : "";
+  }
+
   const parsed = expenseSchema.safeParse(form);
 
   if (!parsed.success) {
     return json<ActionData>(
       {
         errors: parsed.error.flatten().fieldErrors,
-        values: form,
+        values: form, // ✅ Now this is safe
       },
       { status: 400 }
     );
@@ -119,9 +125,7 @@ export default function Add() {
           <input
             name="date"
             type="date"
-            defaultValue={
-              values.date || new Date().toISOString().split("T")[0]
-            }
+            defaultValue={values.date || new Date().toISOString().split("T")[0]}
             aria-invalid={!!actionData?.errors?.date}
             aria-describedby={
               actionData?.errors?.date ? "date-error" : undefined
