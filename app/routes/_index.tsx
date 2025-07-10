@@ -8,6 +8,9 @@ import type { Expense } from "~/types";
 //Chart
 import ExpensesCharts from "~/components/ExpensesCharts";
 
+//icons
+import { FiEdit, FiTrash2 } from "react-icons/fi";
+
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
   const category = url.searchParams.get("category");
@@ -110,20 +113,26 @@ export default function Index() {
                 <td>{e.category}</td>
                 <td>{e.date}</td>
                 <td>
-                  <a href={`/edit/${e.id}`} className="text-blue-600 mr-2">
-                    Edit
-                  </a>
-                  <Form method="post">
-                    <input type="hidden" name="id" value={e.id} />
-                    <button
-                      type="submit"
-                      name="_action"
-                      value="delete"
-                      className="text-red-600"
+                  <div className="flex items-center gap-2">
+                    <a
+                      href={`/edit/${e.id}`}
+                      className="text-blue-600 hover:text-blue-800"
                     >
-                      Delete
-                    </button>
-                  </Form>
+                      <FiEdit className="inline-block w-5 h-5" title="Edit" />
+                    </a>
+                    <Form method="post" className="inline">
+                      <input type="hidden" name="id" value={e.id} />
+                      <button
+                        type="submit"
+                        name="_action"
+                        value="delete"
+                        className="text-red-600 hover:text-red-800"
+                        title="Delete"
+                      >
+                        <FiTrash2 className="inline-block w-5 h-5" />
+                      </button>
+                    </Form>
+                  </div>
                 </td>
               </tr>
             ))}
