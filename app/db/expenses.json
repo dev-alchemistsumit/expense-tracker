@@ -1,58 +1,86 @@
 [
   {
-    "description": "Page's ",
-    "amount": 20,
+    "description": "Purchasing Laptop : MacBook Air Pro",
+    "amount": 100000,
     "category": "Utilities",
-    "date": "2025-07-10",
+    "date": "2025-07-11",
     "id": 1752148356632
   },
   {
-    "description": "Book's ",
-    "amount": 40,
-    "category": "Utilities",
-    "date": "2025-07-09",
-    "id": 1752148426766
-  },
-  {
-    "description": "Notebook's ",
-    "amount": 50,
-    "category": "Utilities",
-    "date": "2025-07-11",
-    "id": 1752148539441
-  },
-  {
-    "description": "Page's ",
-    "amount": 20,
-    "category": "Utilities",
-    "date": "2025-07-10",
-    "id": 1752153201951
-  },
-  {
-    "description": "Food",
-    "amount": 60,
-    "category": "Food",
-    "date": "2025-07-10",
-    "id": 1752153371572
-  },
-  {
-    "description": "Logo",
-    "amount": 40,
-    "category": "Utilities",
-    "date": "2025-07-10",
-    "id": 1752157151035
-  },
-  {
-    "description": "Travel",
-    "amount": 220,
-    "category": "Transport",
-    "date": "2025-07-10",
-    "id": 1752180212814
-  },
-  {
     "description": "Travel Destination : Maldives",
-    "amount": 300,
+    "amount": 30000,
     "category": "Transport",
     "date": "2025-07-11",
     "id": 1752182517526
+  },
+  {
+    "description": "Purchasing Mobile: Apple",
+    "amount": 50000,
+    "category": "Utilities",
+    "date": "2025-07-12",
+    "id": 1752184122498
+  },
+  {
+    "id": 1752186027329,
+    "description": "Transport Expense 1 ",
+    "amount": 2000,
+    "category": "Transport",
+    "date": "2025-07-11"
+  },
+  {
+    "id": 1752186169414,
+    "description": "Transport expense 2",
+    "amount": 8000,
+    "category": "Transport",
+    "date": "2025-07-11"
+  },
+  {
+    "id": 1752186271270,
+    "description": "Purchasing Food Item : Paneer",
+    "amount": 1000,
+    "category": "Food",
+    "date": "2025-07-09"
+  },
+  {
+    "id": 1752186304717,
+    "description": "Purchasing Food Item : Curd",
+    "amount": 3000,
+    "category": "Food",
+    "date": "2025-07-12"
+  },
+  {
+    "id": 1752186363603,
+    "description": "Health Item 1 ",
+    "amount": 5000,
+    "category": "Health",
+    "date": "2025-07-10"
+  },
+  {
+    "id": 1752186484351,
+    "description": "Health Item Number 2",
+    "amount": 5000,
+    "category": "Health",
+    "date": "2025-07-12"
+  },
+  {
+    "id": 1752186540827,
+    "description": "Travel : Dubai",
+    "amount": 50000,
+    "category": "Transport",
+    "date": "2025-07-14"
+  },
+  {
+    "id": 1752186583094,
+    "description": "Food Item 1",
+    "amount": 5000,
+    "category": "Food",
+    "date": "2025-07-14"
+  },
+  {
+    "id": 1752187626321,
+    "description": "Health Item number 3",
+    "amount": 3000,
+    "category": "Health",
+    "date": "2025-07-12"
   }
 ]
