@@ -1,10 +1,13 @@
 // app/routes/index.tsx
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import {  useLoaderData, Form } from "@remix-run/react";
+import { useLoaderData, Form, useSearchParams } from "@remix-run/react";
 import { readExpenses } from "~/lib/db.server";
 import type { Expense } from "~/types";
 
+
+//Chart
+import ExpensesCharts from "~/components/ExpensesCharts";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
@@ -29,7 +32,14 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function Index() {
   const { expenses } = useLoaderData<{ expenses: Expense[] }>();
+  const [searchParams] = useSearchParams();
+
   const total = expenses.reduce((sum: number, e: Expense) => sum + e.amount, 0);
+
+  const isFiltered =
+    searchParams.get("category") ||
+    searchParams.get("from") ||
+    searchParams.get("to");
 
   return (
     <div className="max-w-2xl mx-auto p-4">
@@ -64,6 +74,16 @@ export default function Index() {
           Filter
         </button>
       </Form>
+
+      {/* 🔁 See All Expenses Button */}
+      {isFiltered && (
+        <a
+          href="/"
+          className="bg-gray-400 text-white px-4 py-2 rounded inline-block mb-6"
+        >
+          See All Expenses
+        </a>
+      )}
 
       <table className="w-full border">
         <thead>
@@ -102,10 +122,14 @@ export default function Index() {
           ))}
         </tbody>
       </table>
+
+      {/* 🔍 Expense Charts */}
+      <ExpensesCharts expenses={expenses} />
     </div>
   );
 }
 
+//action delete expense
 import { ActionFunction, redirect } from "@remix-run/node";
 import { deleteExpense } from "~/lib/db.server";
 
