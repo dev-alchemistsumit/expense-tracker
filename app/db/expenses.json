@@ -54,5 +54,19 @@
     "category": "Transport",
     "date": "2025-07-11",
     "id": 1752182517526
+  },
+  {
+    "description": "Purchasing Mobile: Apple",
+    "amount": 50000,
+    "category": "Utilities",
+    "date": "2025-07-12",
+    "id": 1752184122498
+  },
+  {
+    "description": "Purchasing Medicines : Vics",
+    "amount": 70000,
+    "category": "Health",
+    "date": "2025-07-09",
+    "id": 1752184188766
   }
 ]
