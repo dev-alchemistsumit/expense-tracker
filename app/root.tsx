@@ -1,4 +1,5 @@
-import styles from "./tailwind.css";
+import stylesheet  from "./tailwind.css";
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: stylesheet },
+  ];
 }

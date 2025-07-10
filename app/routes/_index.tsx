@@ -15,6 +15,10 @@ export default function Index() {
   return (
     <div className="max-w-2xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Expenses</h1>
+      <div className="bg-green-500 text-white p-4">
+  Tailwind is now working! ✅
+</div>
+
       <div className="mb-4 text-lg">Total: ₹{total}</div>
       <a href="/add" className="bg-blue-500 text-white px-4 py-2 rounded mb-4 inline-block">Add Expense</a>
       <table className="w-full border">
