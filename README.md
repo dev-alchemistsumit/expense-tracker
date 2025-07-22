@@ -1,3 +1,7 @@
+# Intro 
+- a based project. 
+- An expense Tracker Project based on the Remix developement Practices. 
+
 # Welcome to Remix!
 
 - 📖 [Remix docs](https://remix.run/docs)
