@@ -10,7 +10,7 @@
 
 <img width="477" height="378" alt="Screenshot 2025-07-11 061205" src="https://github.com/user-attachments/assets/232a6503-3414-4ef8-8da2-e5f6c19a4bd4" />
 
-# Welcome to Remix!
+# Welcome to Remix Documentation!
 - 📖 [Remix docs](https://remix.run/docs)
 ## Development
 Run the dev server:
